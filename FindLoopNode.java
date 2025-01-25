@@ -62,7 +62,7 @@ public class FindLoopNode {
         obj.tail.next = obj.head; // Point the last node to the head to create a loop
         Node node = findFirstNode(obj.head);
         System.out.println(node.data);
-        // according to my in put the answer is 1
+        // according to my input the answer is 1
 
     }
 }
