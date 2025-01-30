@@ -12,7 +12,7 @@ class SudokuSolver {
             if (mat[row][x] == num)
                 return false;
 
-        // Check if num exists in the col
+        // Check if num exists in the column
         for (int x = 0; x < 9; x++)
             if (mat[x][col] == num)
                 return false;
@@ -31,7 +31,7 @@ class SudokuSolver {
     // Function to solve the Sudoku problem
     static boolean solveSudokuRec(int[][] mat, int row, int col) {
 
-        // base case: Reached nth column of the last row
+        // base case: agar row column last me pahuch jay..
         if (row == 8 && col == 9)
             return true;
 
@@ -47,7 +47,7 @@ class SudokuSolver {
 
         for (int num = 1; num <= 9; num++) {
 
-            // If it is safe to place num at current position
+            // Check kro no safe hai to ise lenge
             if (isSafe(mat, row, col, num)) {
                 mat[row][col] = num;
                 if (solveSudokuRec(mat, row, col + 1))
